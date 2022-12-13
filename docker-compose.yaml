@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  api:
+    build: ./spotify-api
+    container_name: spotify_api_c
+    ports:
+      - '4000:4000'
+  clone:
+    build: ./Spotify-Clone
+    container_name: spotify_clone_c
+    ports:
+      - '3000:3000'
+    stdin_open: true
